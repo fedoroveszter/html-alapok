@@ -11,3 +11,8 @@ git push -u origin main
 git remote add origin https://github.com/fedoroveszter/html-alapok.git
 git branch -M main
 git push -u origin main
+
+--------------------
+git add .
+git commit -m "ez egy újabb módosításom..."
+git push
