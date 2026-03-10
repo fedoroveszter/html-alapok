@@ -23,18 +23,18 @@
 
 /* --- ALAP BEÁLLÍTÁSOK --- */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 20;
+    padding: 20;
     box-sizing: border-box;
 }
 
 body {
     /* Háttérszín */
-    background-color: #ffffff;
-    /* Betűtípus */
-    font-family: sans-serif;
+   background: #6600cc;
+background: radial-gradient(circle, rgba(102, 0, 204, 1) 0%, rgba(78, 9, 181, 1) 14%, rgba(0, 0, 0, 1) 73%);
+    font-family: "Michroma", sans-serif;
     /* Betűszín */
-    color: #333333;
+    color: #ffffff;
     /* Sormagasság */
     line-height: 1.6;
 }
@@ -49,24 +49,56 @@ body {
 /* --- FEJLÉC --- */
 .fejlec {
     /* Háttér, padding, szöveg igazítás */
+    font-family: "Michroma", sans-serif;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 500px;
 }
 
 .fooldal-cim {
     /* Főcím stílusa */
-}
+    font-family: "Michroma", sans-serif;
+    font-weight: bolder;
+
+}   
 
 .kiemeles {
-    /* A "CSS" szó kiemelése a címben */
+  color: #ffae00;
+    font-weight: 800;
+    text-transform: uppercase;
+    /* Csak 1.5 másodperces, gyorsabb lüktetés */
+    animation: feher_glow 2.5s infinite ease-in-out;
+}
+
+@keyframes feher_glow {
+    0%, 100% { 
+        text-shadow: 0 0 5px #a200ff; 
+    }
+    50% { 
+        /* Itt erősödik fel a fehér fény */
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff; 
+    }
 }
 
 .alcim {
     /* Alcím stílusa */
+    font-size:medium;
+    font-weight: lighter;
+    padding-left: 50px;
+    font-style: italic;
 }
 
 
 /* --- BEVEZETŐ --- */
 .bevezeto {
     /* A bevezető szekció háttere, padding-ja */
+flex-direction: column;    
+justify-content: center;   
+align-items: center;       
+text-align: center;        
+padding: 40px;             
+min-height: 200px;
 }
 
 .bevezeto-szoveg p {
