@@ -15,7 +15,7 @@ Egy előre elkészített HTML oldalt kell megformáznod **kizárólag CSS segít
 
 | Fájl | Leírás | Szerkeszthető? |
 |------|--------|:-:|
-| `index.html` | Az oldal struktúrája és tartalma | ❌ NEM |
+| `index.html` | Aza oldal struktúrája és tartalma | ❌ NEM |
 | `style.css` | Az oldal megjelenése — ez a te vásznod | ✅ IGEN |
 
 ## Lépések
