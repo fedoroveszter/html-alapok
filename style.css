@@ -18,30 +18,37 @@
 /* --- GOOGLE FONTS IMPORTÁLÁS ---
    Cseréld ki a saját választásodra!
    -------------------------------- */
-/* @import url('https://fonts.googleapis.com/css2?family=VALASZD+KI&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@300;400;600&display=swap');
 
 
 /* --- ALAP BEÁLLÍTÁSOK --- */
 * {
-    margin: 20;
-    padding: 20;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     /* Háttérszín */
-   background: #beb0cc;
-background: radial-gradient(circle, rgba(102, 0, 204, 1) 0%, rgba(78, 9, 181, 1) 14%, rgba(0, 0, 0, 1) 73%);
-    font-family: "Michroma", sans-serif;
-    /* Betűszín */
-    color: #ffffff;
-    /* Sormagasság */
-    line-height: 1.6;
+    background: #000000;
+    background: linear-gradient(33deg, rgba(0, 0, 0, 1) 0%, rgba(26, 5, 56, 1) 35%, rgb(0, 0, 0) 100%);
+    font-family: 'Nunito', sans-serif;
+    color: #e8e6f0;
+    line-height: 1.7;
+    
+
 }
 
 
 /* --- OLDAL KERET --- */
 .oldal-keret {
+    max-width: 1000px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
     /* Az egész oldal kerete / szélessége */
 }
 
@@ -49,80 +56,118 @@ background: radial-gradient(circle, rgba(102, 0, 204, 1) 0%, rgba(78, 9, 181, 1)
 /* --- FEJLÉC --- */
 .fejlec {
     /* Háttér, padding, szöveg igazítás */
-    font-family: "Michroma", sans-serif;
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    padding-left: 500px;
+    min-height: 100vh; /* a vh a viewport heightom yeah */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    align-items: center;  
+    text-align: center;
+    
 }
 
 .fooldal-cim {
     /* Főcím stílusa */
-    font-family: "Michroma", sans-serif;
-    font-weight: bolder;
+    font-family: 'Righteous', sans-serif;
+    font-size: 120px;
+    font-weight: 400;
+    margin-bottom: 16px;
 
 }   
 
 .kiemeles {
-  color: #ffae00;
-    font-weight: 800;
-    text-transform: uppercase;
-    /* Csak 1.5 másodperces, gyorsabb lüktetés */
-    animation: feher_glow 2.5s infinite ease-in-out;
-}
+    background: linear-gradient(to right, #b8a0ff, #52019e);  /* szep gradientes lesz */
+    background-clip:  text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 
-@keyframes feher_glow {
-    0%, 100% { 
-        text-shadow: 0 0 5px #a200ff; 
-    }
-    50% { 
-        /* Itt erősödik fel a fehér fény */
-        text-shadow: 0 0 20px #fff, 0 0 30px #fff; 
-    }
-}
+
+  }
 
 .alcim {
     /* Alcím stílusa */
-    font-size:medium;
-    font-weight: lighter;
-    padding-left: 50px;
-    font-style: italic;
+    font-size: 25px;
+    font-weight: 300;
+    color: #9490a8;
+    transition: color 0.3s ease;
+    
 }
 
+.alcim:hover {
+    color: #a78bfa;
+}
 
 /* --- BEVEZETŐ --- */
 .bevezeto {
     /* A bevezető szekció háttere, padding-ja */
-flex-direction: column;    
-justify-content: center;   
-align-items: center;       
-text-align: center;        
-padding: 40px;             
-min-height: 200px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    border-top: 3px solid #1e1b2e;
 }
 
-.bevezeto-szoveg p {
+.bevezeto-szoveg {
+    display: flex;
+    gap: 48px;
+}
+
+.bevezeto-szoveg p {  /* ez ilyen hivatkozas! ergo egy bekezdes szoveg(html-hez kapcs!) */
     /* Bevezető bekezdések */
+    flex: 1;
+    color: #b8b4cc;
+    font-size: 15px;
 }
 
 
 /* --- KÁRTYÁK (a fő tartalom elemei) --- */
 .kartya {
     /* Háttér, padding, margin, border, border-radius, box-shadow */
+    background-color: #12101f;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1e1b2e;
+    border-radius: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease; /* mini animom */
 }
+
+.kartya:hover { /* az egeret fele viszem, atmenetes valtas */
+    /* meno lilas lesz */
+    border-color: #a78bfa;
+}
+
 
 .kartya-cim {
     /* Kártya címek stílusa */
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #e8e6f0;
+    margin-bottom: 16px;
+}
+
+.kartya p {
+    color: #9490a8;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 
 /* --- SZABÁLYOK LISTA --- */
 .szabaly-lista {
     /* Lista stílus (list-style, padding) */
+    list-style: decimal;  /* beszamozza a szabalyokat */
+    margin-left: 24px;
 }
 
 .szabaly {
     /* Egyes szabály elemek */
+    margin-left: 24px;
 }
 
 
@@ -133,62 +178,151 @@ min-height: 200px;
        flex-wrap: wrap;
        gap: ...;
     */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+
 }
 
 .inspiracio-elem {
     /* Egyes inspiráció kártyák */
+    flex: 1;
+    min-width: 160px;
+    background-color: #0d0d14;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1e1b2e;
+    border-radius: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
 .inspiracio-elem h4 {
     /* Inspiráció alcímek */
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color: #a78bfa;
+    margin-bottom: 8px;
+}
+
+.inspiracio-elem p {
+    font-size: 13px;
+    color: #9490a8;
 }
 
 
 /* --- TECHNOLÓGIA BADGE-EK --- */
 .tech-lista {
     /* Flexbox elrendezés a badge-ekhez */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
 }
 
 .tech-badge {
     /* Kis címkék stílusa: háttér, padding, border-radius */
+    background-color: #1e1b2e;
+    color: #c4bfdb;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 99px;
+    font-size: 13px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #2e2a45;
+
 }
 
 
 /* --- OLDALSÁV --- */
 .oldalsav {
     /* Oldalsáv háttere, pozíciója */
+    background-color: #12101f;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1e1b2e;
+    border-radius: 16px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-bottom: 24px;
 }
 
 .oldalsav-cim {
     /* Oldalsáv címek */
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #a78bfa;
+    margin-bottom: 12px;
+    margin-top: 24px;
+
 }
 
 .szerzo-nev {
     /* Szerző neve — írd át a CSS-ben is ha akarod kiemelni */
+    font-size: 17px;
+    font-weight: 600;
+    color: #e8e6f0;
+    margin-bottom: 4px;
 }
 
+.szerzo-szak {
+    font-size: 13px;
+    color: #9490a8;
+}
+ 
+.szerzo-ev {
+    font-size: 13px;
+    color: #9490a8;
+}
 
 /* --- LINKEK --- */
 .link-lista {
     /* Link lista stílus */
+    list-style: none;
+
 }
 
 .kulso-link {
     /* Link stílus: szín, text-decoration */
+    color: #9490a8;
+    text-decoration: none; /* nem lesz tipik athuzasom */
+    font-size: 14px;
+    transition: color 0.2s ease; /* egeret fele viszem */
+
 }
 
 .kulso-link:hover {
     /* Hover effekt a linkekre */
+    color: #a78bfa;
 }
 
 
 /* --- LÁBLÉC --- */
 .lablec {
     /* Lábléc háttér, padding, szöveg */
+    border-top: 3px solid #1e1b2e;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: #9490a8;
+    font-size: 14px;
 }
 
 .lablec-megjegyzes {
     /* Kis megjegyzés a láblécben */
+    margin-top: 8px;
+    font-size: 13px;
+    color: #5c5875;
 }
 
 
