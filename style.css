@@ -60,7 +60,7 @@ body {
 /* --- FEJLÉC --- */
 .fejlec {
     /* Háttér, padding, szöveg igazítás */
-    min-height: 100vh; /* a vh a viewport heightom yeah */
+    min-height: 100vh; /* a vh a viewport heightom yeah, ha pxet raknek akkor az nem igazodik a kepernyo merethez */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,7 +192,7 @@ body {
 
 .inspiracio-elem {
     /* Egyes inspiráció kártyák */
-    flex: 1;
+    flex: 1; /* egyenloen van elosztva egymas mellet!! */
     min-width: 160px;
     background-color: #0d0d14;
     border-width: 1px;
